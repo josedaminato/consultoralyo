@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | L&amp;O 360 Consultores</title>
+    <meta name="description" content="Pedí presupuesto de higiene y seguridad en Mendoza a L&O 360 Consultores." />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="L&amp;O 360 Consultores" />
+          <span class="brand-text"><strong>L&amp;O 360</strong><span>Consultores · Mendoza</span></span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú"><span></span></button>
+        <nav class="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="mediciones.html">Mediciones</a>
+          <a href="capacitaciones.html">Capacitaciones</a>
+          <a class="is-active" href="contacto.html">Contacto</a>
+          <a class="btn btn-primary" href="contacto.html">Solicitar presupuesto</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="kicker">Contacto</p>
+          <h1>Contanos qué necesita tu empresa</h1>
+          <p class="muted">El formulario abre WhatsApp con tus datos. Cuando tengas el número real, se cambia en un solo lugar.</p>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 0">
+        <div class="container contact-grid">
+          <aside class="card">
+            <h2>Datos</h2>
+            <p class="muted">L&amp;O 360 Consultores<br />Gran Mendoza, Argentina</p>
+            <p class="muted">WhatsApp: número de ejemplo 261 000-0000<br />Mail: pendiente de confirmar</p>
+            <p><a class="btn btn-dark" href="https://wa.me/5492610000000" target="_blank" rel="noreferrer">Escribir ahora</a></p>
+          </aside>
+          <form class="card form" id="contacto-form">
+            <label>Nombre <input name="nombre" required autocomplete="name" /></label>
+            <label>Empresa <input name="empresa" required /></label>
+            <label>Teléfono <input name="telefono" required type="tel" autocomplete="tel" /></label>
+            <label
+              >Servicio de interés
+              <select name="servicio">
+                <option>Servicio de HyS</option>
+                <option>Obra / programa de seguridad</option>
+                <option>Mediciones</option>
+                <option>Capacitaciones</option>
+                <option>Otro</option>
+              </select>
+            </label>
+            <label>Mensaje <textarea name="mensaje" required placeholder="Rubro, cantidad de personal y localidad"></textarea></label>
+            <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+            <p class="form-notice muted" hidden>Listo: se abrió WhatsApp con el mensaje.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><strong>L&amp;O 360 Consultores</strong><p>Mendoza, Argentina.</p></div>
+        <div><strong>Sitio</strong><p><a href="index.html">Inicio</a></p></div>
+        <div><strong>Contacto</strong><p>WhatsApp · Gran Mendoza</p></div>
+      </div>
+      <div class="container legal">© 2026 L&amp;O 360 Consultores.</div>
+    </footer>
+    <a class="whatsapp" href="https://wa.me/5492610000000" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
+    <script src="js/main.js"></script>
+  </body>
+</html>
