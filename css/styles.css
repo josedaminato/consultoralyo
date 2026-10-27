@@ -461,12 +461,14 @@ h2 {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.band .card {
-  color: var(--ink);
+.band .card,
+.band .process h3 {
+  color: #122033;
 }
 
-.band .card .muted {
-  color: var(--muted);
+.band .card .muted,
+.band .process p {
+  color: #5b6b7a;
 }
 
 .accordion {
