@@ -461,6 +461,14 @@ h2 {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.band .card {
+  color: var(--ink);
+}
+
+.band .card .muted {
+  color: var(--muted);
+}
+
 .accordion {
   display: grid;
   gap: 10px;
