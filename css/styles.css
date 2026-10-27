@@ -452,6 +452,25 @@ h2 {
   padding: 22px 22px 22px 48px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .process article.card {
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+  }
+
+  .process article.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(6, 22, 40, 0.18);
+  }
+
+  .process article.card::before {
+    transition: transform 0.28s ease;
+  }
+
+  .process article.card:hover::before {
+    transform: translateX(-8px) scale(1.08);
+  }
+}
+
 .band {
   background: var(--navy);
   color: #fff;
