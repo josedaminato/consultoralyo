@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20261027b" />
+    <link rel="stylesheet" href="css/styles.css?v=20261111b" />
   </head>
   <body class="home">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -62,7 +62,15 @@
             </div>
           </div>
           <div class="hero-card">
-            <img src="assets/logo.png" alt="Logo L&amp;O 360 Consultores" />
+            <img
+              class="hero-photo"
+              src="assets/img/profesional-seguridad.webp"
+              alt="Profesional de higiene y seguridad con casco, antiparras y arnés en una obra"
+              width="1024"
+              height="1024"
+              fetchpriority="high"
+              decoding="async"
+            />
             <div class="pills">
               <span>Calidad</span>
               <span>Medio ambiente</span>
@@ -139,24 +147,36 @@
       </section>
 
       <section class="section" style="padding-top: 0">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="kicker">Qué obtenés</p>
-            <h2>Servicio de calidad y medio ambiente</h2>
-          </div>
-          <div class="grid-3">
-            <article class="card reveal">
-              <h3>Auditoría interna y externa</h3>
-              <p class="muted">Auditorías internas y en proveedores para detectar desvíos y verificar el cumplimiento de los requisitos.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Clasificación de residuos</h3>
-              <p class="muted">Ordenamiento y clasificación de residuos para cumplir la normativa y reducir costos de gestión.</p>
-            </article>
-            <article class="card reveal">
-              <h3>Estudio de impacto ambiental</h3>
-              <p class="muted">Evaluación de los efectos de la actividad sobre el entorno y las medidas para cumplir las regulaciones.</p>
-            </article>
+        <div class="container split-media">
+          <figure class="photo reveal">
+            <img
+              src="assets/img/clasificacion-residuos.webp"
+              alt="Equipo separando residuos en contenedores de papel, plásticos, metales y orgánicos"
+              width="1024"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div>
+            <div class="section-head reveal">
+              <p class="kicker">Qué obtenés</p>
+              <h2>Servicio de calidad y medio ambiente</h2>
+            </div>
+            <div class="stack">
+              <article class="card reveal">
+                <h3>Auditoría interna y externa</h3>
+                <p class="muted">Auditorías internas y en proveedores para detectar desvíos y verificar el cumplimiento de los requisitos.</p>
+              </article>
+              <article class="card reveal">
+                <h3>Clasificación de residuos</h3>
+                <p class="muted">Ordenamiento y clasificación de residuos para cumplir la normativa y reducir costos de gestión.</p>
+              </article>
+              <article class="card reveal">
+                <h3>Estudio de impacto ambiental</h3>
+                <p class="muted">Evaluación de los efectos de la actividad sobre el entorno y las medidas para cumplir las regulaciones.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -248,12 +268,18 @@
         </div>
         <div>
           <strong>Contacto</strong>
-          <p>WhatsApp · Gran Mendoza<br />Reemplazá el número en el botón verde cuando lo tengas.</p>
+          <p><a href="tel:+5492616848636">261 684-8636</a><br /><a href="tel:+5492615934395">261 593-4395</a></p>
         </div>
       </div>
       <div class="container legal">© 2026 L&amp;O 360 Consultores. Todos los derechos reservados.</div>
     </footer>
-    <a class="whatsapp" href="https://wa.me/5492610000000" target="_blank" rel="noreferrer" aria-label="WhatsApp">WA</a>
+    <div class="whatsapp-dock">
+      <div class="whatsapp-menu" id="whatsapp-menu" hidden>
+        <a href="https://wa.me/5492616848636" target="_blank" rel="noreferrer">261 684-8636</a>
+        <a href="https://wa.me/5492615934395" target="_blank" rel="noreferrer">261 593-4395</a>
+      </div>
+      <button class="whatsapp" type="button" aria-expanded="false" aria-controls="whatsapp-menu" aria-label="Elegir WhatsApp">WA</button>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

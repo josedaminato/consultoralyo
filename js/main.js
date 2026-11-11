@@ -31,6 +31,8 @@ document.querySelectorAll("[data-accordion]").forEach((item) => {
   });
 });
 
+const whatsappNumeros = new Set(["5492616848636", "5492615934395"]);
+
 const form = document.querySelector("#contacto-form");
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -40,15 +42,42 @@ form?.addEventListener("submit", (event) => {
   const telefono = String(data.get("telefono") || "").trim();
   const servicio = String(data.get("servicio") || "").trim();
   const mensaje = String(data.get("mensaje") || "").trim();
+  const elegido = String(data.get("destino") || "");
+  const destino = whatsappNumeros.has(elegido) ? elegido : "5492616848636";
   const text = encodeURIComponent(
     `Hola L&O 360, soy ${nombre} (${empresa}). Tel: ${telefono}. Servicio: ${servicio}. ${mensaje}`
   );
-  window.open(`https://wa.me/5492610000000?text=${text}`, "_blank");
+  window.open(`https://wa.me/${destino}?text=${text}`, "_blank", "noopener");
   form.reset();
   const notice = form.querySelector(".form-notice");
   if (notice) {
     notice.hidden = false;
   }
+});
+
+const dock = document.querySelector(".whatsapp-dock");
+const waButton = dock?.querySelector(".whatsapp");
+const waMenu = dock?.querySelector(".whatsapp-menu");
+
+const closeWhatsapp = () => {
+  if (!waMenu || !waButton) return;
+  waMenu.hidden = true;
+  waButton.setAttribute("aria-expanded", "false");
+};
+
+waButton?.addEventListener("click", () => {
+  const willOpen = waMenu.hidden;
+  waMenu.hidden = !willOpen;
+  waButton.setAttribute("aria-expanded", String(willOpen));
+});
+
+document.addEventListener("click", (event) => {
+  if (!dock || dock.contains(event.target)) return;
+  closeWhatsapp();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeWhatsapp();
 });
 
 const observer = new IntersectionObserver(
