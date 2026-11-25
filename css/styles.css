@@ -423,8 +423,7 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.stat b,
-.stat-figure {
+.stat b {
   display: block;
   font-family: Outfit, sans-serif;
   font-size: 1.7rem;
@@ -487,10 +486,6 @@ h2 {
 
 .band .muted {
   color: rgba(255, 255, 255, 0.75);
-}
-
-.band .kicker {
-  color: #b7f0c0;
 }
 
 .band .card,
@@ -709,11 +704,6 @@ h2 {
 .contact-lines a[href^="https"] {
   color: var(--teal-deep);
   font-size: 0.92rem;
-}
-
-.card a[href^="mailto:"] {
-  font-weight: 700;
-  color: var(--teal-deep);
 }
 
 .reveal {
